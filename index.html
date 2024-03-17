@@ -1,18 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>miks518</title>
-  <link rel="icon" href="image/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Calculator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .calculator {
+        width: 250px;
+        margin: 50px auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 18px;
+        box-sizing: border-box;
+    }
+    .row {
+        display: flex;
+    }
+    .button {
+        flex: 1;
+        margin: 5px;
+        padding: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        border: none;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+    }
+    .button:hover {
+        background-color: #ddd;
+    }
+    .result {
+        font-size: 24px;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1 id="nameText" class="custom-font">I'm miks</h1>
-  </div>
 
-  <script src="function.js"></script>
+<div class="calculator">
+    <input type="text" id="result" readonly class="result">
+    <div class="row">
+        <button class="button" onclick="addToInput('7')">7</button>
+        <button class="button" onclick="addToInput('8')">8</button>
+        <button class="button" onclick="addToInput('9')">9</button>
+        <button class="button" onclick="addToInput('+')">+</button>
+    </div>
+    <div class="row">
+        <button class="button" onclick="addToInput('4')">4</button>
+        <button class="button" onclick="addToInput('5')">5</button>
+        <button class="button" onclick="addToInput('6')">6</button>
+        <button class="button" onclick="addToInput('-')">-</button>
+    </div>
+    <div class="row">
+        <button class="button" onclick="addToInput('1')">1</button>
+        <button class="button" onclick="addToInput('2')">2</button>
+        <button class="button" onclick="addToInput('3')">3</button>
+        <button class="button" onclick="addToInput('*')">*</button>
+    </div>
+    <div class="row">
+        <button class="button" onclick="addToInput('0')">0</button>
+        <button class="button" onclick="addToInput('.')">.</button>
+        <button class="button" onclick="clearInput()">C</button>
+        <button class="button" onclick="calculate()">=</button>
+    </div>
+</div>
+
+<script>
+    function addToInput(value) {
+        document.getElementById('result').value += value;
+    }
+
+    function clearInput() {
+        document.getElementById('result').value = '';
+    }
+
+    function calculate() {
+        try {
+            document.getElementById('result').value = eval(document.getElementById('result').value);
+        } catch(error) {
+            document.getElementById('result').value = 'Error';
+        }
+    }
+</script>
+
 </body>
 </html>
