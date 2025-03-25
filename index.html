@@ -1,21 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-        
-<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
 </head>
+
 <body>
 
-<div class="container">
-        <h1 id="nameText" class="custom-font">I'm mikko</h1>
- </div>
+    <h1>Hello!</h1>
+    <h2> I am mikko </h2>
+    <p class="status">CS Undergrad | SecOps Beginner</p>
 
-        <script src="function.js">
-                
-        </script>
+    <div class="icons">
+        <img src="images/cpp.png" alt="c++">
+        <img src="images/java.png" alt="java">
+        <img src= "images/bash.png" alt="bash">
+        <img src= "images/python.png" alt="python">
+    </div>
+
+    <div class="buttons">
+        <a href="#">About Me</a>
+        <a href="#">Contact Me</a>
+    </div>
+
+    <img class="profile" src="images/miks.jpg" alt="my pic">
+
+    <div class="socialLinks">
+        <a href="#"><img src="images/facebook.png" alt="facebook"></a>
+        <a href="#"><img src="images/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="images/github.png" alt="github"></a>
+        <a href="#"><img src="images/mastodon.png" alt="mastodon"></a>
+        <a href="#"><img src="images/youtube.png" alt="youtube"></a>
+        
+    </div>
+
+    <p class="copyright">&copy; 2025 TWlrcwo=</p>
 
 </body>
+
+<style>
+  body {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      text-align: center;
+      padding: 20px;
+  }
+  h1 {
+      font-size: 50px;
+      margin: 10px 0;
+  }
+  h2 {
+      font-size: 30px;
+      margin: 5px 0;
+      color: gray;
+  }
+  .status {
+      font-size: 17px;
+      margin-bottom: 20px;
+  }
+  .icons {
+      margin: 20px 0;
+  }
+  .icons img {
+      width: 50px;
+      margin: 10px;
+  }
+  .buttons {
+      margin: 20px 0;
+      font-family: monospace;
+  }
+  .buttons a {
+    background: transparent;
+      color: white;
+      padding: 10px 20px;
+  }
+  .profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 50px 0;
+    border: 3px solid white;
+    transform: rotate(354deg);
+  }
+  .socialLinks a {
+      display: inline-block;
+      margin: 10px;
+  }
+  .socialLinks img {
+      width: 40px;
+  }
+  .copyright {
+      margin-top: 30px;
+      font-size: 14px;
+      color: gray;
+  }
+</style>
+
 </html>
